@@ -1,6 +1,7 @@
 #Libreria
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt
 
 img = cv2.imread("girasol.jpg")
 img = cv2.resize(img,(300,250))
@@ -26,3 +27,9 @@ cv2.imshow("Imagen Canny", imgCanny)
 cv2.imshow("Imagen Dilatacion", imgDilation)
 cv2.imshow("Imagen Eroded", imgEroded)
 cv2.waitKey(0)
+
+
+#Leer con matplotlib
+plt.imshow(img)
+plt.title("Imagen con Matplotlib")
+plt.show()
