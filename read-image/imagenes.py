@@ -32,6 +32,10 @@ height = 50
 imgCropped = img[y:y+height, x:x+width]
 
 
+#Detectar colores
+
+
+
 cv2.imshow("Imagen Original", img)
 cv2.imshow("Imagen Gris 1", imgGray)
 cv2.imshow("Imagen Gris 2", imgGray0)
