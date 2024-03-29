@@ -19,6 +19,19 @@ imgCanny = cv2.Canny(img, 200, 200)
 imgDilation = cv2.dilate(imgCanny, kernel, iterations=1)
 imgEroded = cv2.erode(imgDilation, kernel, iterations=1)
 
+#Recortar imagen
+# Lugar donde empieza el recorte
+x = 10
+y = 20
+
+# Tamaño del recorte
+width = 100
+height = 50
+
+# Recortar la imagen
+imgCropped = img[y:y+height, x:x+width]
+
+
 cv2.imshow("Imagen Original", img)
 cv2.imshow("Imagen Gris 1", imgGray)
 cv2.imshow("Imagen Gris 2", imgGray0)
@@ -26,6 +39,7 @@ cv2.imshow("Imagen Blur", imgBlur)
 cv2.imshow("Imagen Canny", imgCanny)
 cv2.imshow("Imagen Dilatacion", imgDilation)
 cv2.imshow("Imagen Eroded", imgEroded)
+cv2.imshow("Imagen Cropped", imgCropped)
 cv2.waitKey(0)
 
 
